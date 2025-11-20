@@ -1,0 +1,44 @@
+REPORTE DE CONFIGURACIÓN - PARTE 2
+==================================
+Proyecto: ISL135 - Automatización y Monitoreo
+Grupo: 01
+Integrantes: Alisson y Danilo
+Fecha: Mon Nov 17 07:06:05 PM CST 2025
+
+CONFIGURACIÓN REALIZADA:
+------------------------
+1. SCRIPT DE MONITOREO:
+   - Nombre: reporte_sistema.sh
+   - Ubicación: /proyecto/scripts/reporte_sistema.sh
+   - Permisos: -rwxr-xr-x
+   - Ejecutable: SI
+
+2. TAREA PROGRAMADA CRON:
+   - Frecuencia: Cada 30 minutos
+   - Comando: /proyecto/scripts/reporte_sistema.sh >> /var/log/proyecto/reporte_sistema.log
+   - Configuración: */30 * * * * /proyecto/scripts/reporte_sistema.sh >> /var/log/proyecto/reporte_sistema.log 2>&1
+*/30 * * * * /proyecto/scripts/reporte_sistema.sh >> /var/log/proyecto/reporte_sistema.log 2>&1
+
+3. ARCHIVO DE LOG:
+   - Ubicación: /var/log/proyecto/reporte_sistema.log
+   - Tamaño: 1.5K
+
+4. INFORMACIÓN MONITOREADA:
+   - Fecha y hora actual
+   - Nombre del host del sistema
+   - Número de usuarios conectados
+   - Espacio libre en disco principal
+   - Memoria RAM disponible
+   - Contenedores Docker activos
+
+VERIFICACIÓN:
+-------------
+-----------------------------------------
+Espacio libre en disco:
+  581G libres de 915G (34% usado)
+Memoria RAM disponible:
+  5.6Gi disponibles de 14Gi
+Contenedores Docker activos: Docker no instalado
+=========================================
+
+CONFIGURACIÓN COMPLETADA: Mon Nov 17 07:06:05 PM CST 2025

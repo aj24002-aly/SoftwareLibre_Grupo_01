@@ -1,0 +1,40 @@
+REPORTE DE CONFIGURACIÓN - PARTE 1
+==================================
+Proyecto: ISL135 - Introducción al Software Libre
+Grupo: 01
+Integrantes: Alisson y Danilo
+Fecha: Mon Nov 17 05:08:49 PM CST 2025
+
+CONFIGURACIÓN REALIZADA:
+------------------------
+1. HOSTNAME: servidor-grupo01
+
+2. USUARIOS CREADOS:
+   - adminsys: uid=1001(adminsys) gid=1001(adminsys) groups=1001(adminsys),27(sudo),1014(soporte)
+   - tecnico: uid=1002(tecnico) gid=1002(tecnico) groups=1002(tecnico),1014(soporte) 
+   - visitante: uid=1003(visitante) gid=1003(visitante) groups=1003(visitante),1015(web)
+
+3. GRUPOS CREADOS:
+   - soporte: soporte:x:1014:adminsys,tecnico
+   - web: web:x:1015:visitante
+
+4. ESTRUCTURA DE DIRECTORIOS:
+total 24
+drwxr-xr-x  6 root root    4096 Nov 17 16:55 .
+drwxr-xr-x 24 root root    4096 Nov 17 16:55 ..
+drwxr-xr-x  2 root root    4096 Nov 17 16:56 capturas
+drwxrwsr-x  2 root soporte 4096 Nov 17 16:55 datos
+drwxr-xr-x  2 root root    4096 Nov 17 16:55 scripts
+drwxrwsr-x  2 root web     4096 Nov 17 16:55 web
+
+5. PERMISOS CONFIGURADOS:
+   - /proyecto/datos: drwxrwsr-x 2 root soporte 4096 Nov 17 16:55 /proyecto/datos
+   - /proyecto/web: drwxrwsr-x 2 root web 4096 Nov 17 16:55 /proyecto/web
+   - /proyecto/scripts: drwxr-xr-x 2 root root 4096 Nov 17 16:55 /proyecto/scripts
+   - /proyecto/capturas: drwxr-xr-x 2 root root 4096 Nov 17 16:56 /proyecto/capturas
+
+6. PERMISOS SGID:
+/proyecto/web
+/proyecto/datos
+
+CONFIGURACIÓN COMPLETADA: Mon Nov 17 05:08:49 PM CST 2025
